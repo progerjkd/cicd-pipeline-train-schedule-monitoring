@@ -31,10 +31,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
   res.locals.startEpoch = Date.now();
+  next();
+  
   res.locals = {
      broken: broken
    };
-  next();
+  
 })
 
 app.use('/', indexRouter);
