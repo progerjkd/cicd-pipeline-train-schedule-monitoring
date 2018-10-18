@@ -50,10 +50,11 @@ app.get('/break', function(req, res, next) {
 	res.status(200).send('The app is now broken!')
 });
 
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
   next(createError(404));
-});
+});*/
 
 // error handler
 app.use(function(err, req, res, next) {
