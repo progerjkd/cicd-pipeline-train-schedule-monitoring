@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var broken = false;
 
-
 var indexRouter = require('./routes/index');
 var trainsRouter = require('./routes/trains');
 var metricsRouter = require('./routes/metrics');
@@ -46,9 +45,9 @@ app.get('/break', function(req, res, next) {
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
   next(createError(404));
-});
+});*/
 
 // error handler
 app.use(function(err, req, res, next) {
