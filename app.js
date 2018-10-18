@@ -30,7 +30,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
-   res.locals.startEpoch = Date.now()
    res.locals = {
      broken: broken
    };
